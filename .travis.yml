@@ -1,0 +1,12 @@
+sudo: required
+
+language: java
+
+services:
+  -  docker
+  
+before_install:
+  -  docker build -t fizzbuzz/junit .
+  
+script:
+  -  docker run fizzbuzz/junit /bin/sh -c "cd /usr/src/myapp; mvn package; mvn clean test;"
