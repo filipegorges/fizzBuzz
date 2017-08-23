@@ -12,4 +12,5 @@ before_install:
   -  docker build -t fizzbuzz/junit .
   
 script:
+  -  cd my-app/
   -  docker run fizzbuzz/junit /bin/sh -c "mvn package; mvn clean test;"
