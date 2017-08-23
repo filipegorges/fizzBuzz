@@ -15,4 +15,4 @@ script:
   -  cd my-app/
   -  ls -l
   -  pwd
-  -  docker run fizzbuzz/junit /bin/sh -c "mvn package; mvn clean test;"
+  -  docker run fizzbuzz/junit /bin/sh -c "ls -l; pwd; mvn package; mvn clean test;"
