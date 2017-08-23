@@ -13,4 +13,6 @@ before_install:
   
 script:
   -  cd my-app/
+  -  ls -l
+  -  pwd
   -  docker run fizzbuzz/junit /bin/sh -c "mvn package; mvn clean test;"
